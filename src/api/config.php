@@ -4,7 +4,7 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 
 $host = "localhost";
-$user = "root"; // sesuaikan username MySQL
+$user = "c5bayudian"; // sesuaikan username MySQL
 $pass = "Katasandi";     // sesuaikan password MySQL
 $db   = "c5bayu";
 
