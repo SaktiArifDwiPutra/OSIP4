@@ -11,20 +11,13 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
-<<<<<<< HEAD
-    "lucide-react": "^0.546.0",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "tailwindcss": "^4.1.16",
-    "react-syntax-highlighter": "^15.6.6"
-=======
     "axios": "^1.13.2",
     "lucide-react": "^0.546.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.6",
     "react-syntax-highlighter": "^15.6.6",
     "tailwindcss": "^4.1.16"
->>>>>>> c4bbe0a (Add Page Jadwal Apel and Berita)
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
