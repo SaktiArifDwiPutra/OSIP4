@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import LoginForm from "./LoginForm";
 
 export default function Navbar({ scrolled, user, setUser }) {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
@@ -78,22 +77,6 @@ export default function Navbar({ scrolled, user, setUser }) {
               {navItems.map((item) => (
                 <NavLink key={item.to} item={item} />
               ))}
-
-              {user ? (
-                <button
-                  onClick={handleLogout}
-                  className="text-sm lg:text-base text-gray-300 hover:text-white"
-                >
-                  Logout ({user.username})
-                </button>
-              ) : (
-                <button
-                  onClick={() => setShowLogin(true)}
-                  className="text-sm lg:text-base text-gray-300 hover:text-white"
-                >
-                  Login
-                </button>
-              )}
             </div>
 
             {/* Mobile toggle */}
@@ -117,28 +100,6 @@ export default function Navbar({ scrolled, user, setUser }) {
               {navItems.map((item) => (
                 <NavLink key={item.to} item={item} isMobile={true} />
               ))}
-
-              {user ? (
-                <button
-                  onClick={() => {
-                    handleLogout();
-                    setMobileMenuIsOpen(false);
-                  }}
-                  className="block w-full text-left text-gray-300 hover:text-white text-sm"
-                >
-                  Logout ({user.username})
-                </button>
-              ) : (
-                <button
-                  onClick={() => {
-                    setShowLogin(true);
-                    setMobileMenuIsOpen(false);
-                  }}
-                  className="block w-full text-left text-gray-300 hover:text-white text-sm"
-                >
-                  Login
-                </button>
-              )}
             </div>
           </div>
         )}
