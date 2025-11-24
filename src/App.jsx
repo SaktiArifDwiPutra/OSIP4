@@ -7,6 +7,7 @@ import JadwalApelPage from "./pages/JadwalApelPage";
 import BeritaPage from "./pages/BeritaPage";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import Admin from "./pages/Admin";
 
 function Layout({ children }) {
   const [scrolled, setScrolled] = useState(false);
@@ -44,7 +45,7 @@ function AppContent() {
     <Routes>
       <Route path="*" element={<NotFound />} />
       <Route path="/" element={<Home />} />
-
+      <Route path="/admin" element={<Admin />} />
       <Route path="/jadwal-apel" element={<JadwalApelPage />} />
       <Route path="/berita" element={<BeritaPage />} />
     </Routes>
