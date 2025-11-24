@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import JadwalApelPage from "./pages/JadwalApelPage";
 import BeritaPage from "./pages/BeritaPage";
 import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
 
 function Layout({ children }) {
   const [scrolled, setScrolled] = useState(false);
@@ -41,7 +42,9 @@ function Layout({ children }) {
 function AppContent() {
   return (
     <Routes>
+      <Route path="*" element={<NotFound />} />
       <Route path="/" element={<Home />} />
+
       <Route path="/jadwal-apel" element={<JadwalApelPage />} />
       <Route path="/berita" element={<BeritaPage />} />
     </Routes>
